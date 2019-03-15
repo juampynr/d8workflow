@@ -64,7 +64,7 @@ class ScriptHandler {
       $fs->copy($drupalRoot . '/sites/example.settings.local.php',
         $drupalRoot . '/sites/default/settings.local.php');
       $event->getIO()
-        ->write('Created a web/sites/default/local.settings.php file. Review the database details in this file.');
+        ->write('Created a web/sites/default/settings.local.php file. Review the database details in this file.');
     }
   }
 
