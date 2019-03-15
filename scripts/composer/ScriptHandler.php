@@ -58,6 +58,14 @@ class ScriptHandler {
       umask($oldmask);
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
     }
+
+    // Copy example.settings.local.php into settings.local.php.
+    if (!$fs->exists($drupalRoot . '/sites/default/settings.local.php')) {
+      $fs->copy($drupalRoot . '/sites/example.settings.local.php',
+        $drupalRoot . '/sites/default/settings.local.php');
+      $event->getIO()
+        ->write('Created a web/sites/default/local.settings.php file. Review the database details in this file.');
+    }
   }
 
   /**
