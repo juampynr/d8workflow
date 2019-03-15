@@ -132,7 +132,7 @@ $settings['skip_permissions_hardening'] = TRUE;
 
 // Default database connection settings.
 $databases['default']['default'] = array (
-  'database' => 'd8worfklow',
+  'database' => 'd8workflow',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
