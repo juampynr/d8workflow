@@ -136,8 +136,8 @@ $databases['default']['default'] = array (
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
+  'host' => 'mariadb',
+  'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
