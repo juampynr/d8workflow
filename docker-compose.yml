@@ -13,10 +13,9 @@ services:
       - ./mariadb-init:/docker-entrypoint-initdb.d
       - ./var/lib/mysql:/var/lib/mysql
   php:
-    image: localphp:latest
+    image: juampynr/d8workflow:latest
     container_name: php
     ports:
       - "80:80"
-      - "443:443"
     volumes:
       - ./:/var/www/html
