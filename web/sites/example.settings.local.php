@@ -132,9 +132,9 @@ $settings['skip_permissions_hardening'] = TRUE;
 
 // Default database connection settings.
 $databases['default']['default'] = array (
-  'database' => 'd8workflow',
-  'username' => 'root',
-  'password' => 'root',
+  'database' => getenv('MYSQL_DATABASE'),
+  'username' => getenv('MYSQL_USER'),
+  'password' => getenv('MYSQL_PASSWORD'),
   'prefix' => '',
   'host' => 'mariadb',
   'port' => '3306',
