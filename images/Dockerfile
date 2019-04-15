@@ -18,7 +18,11 @@ RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/down
   chmod +x drush.phar && \
   mv drush.phar /usr/local/bin/drush
 
-# Install a bunch of useful commands.
+# Install XDebug.
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+# Install various useful commands.
 RUN apt-get install -y \
   git \
   mysql-client \

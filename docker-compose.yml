@@ -15,6 +15,10 @@ services:
   php:
     image: juampynr/d8workflow:latest
     container_name: php
+    environment:
+      - PHP_EXTENSION_DEBUG=1
+      - PHP_IDE_CONFIG="serverName=local"
+      - XDEBUG_CONFIG="remote_autostart=1"
     ports:
       - "80:80"
     volumes:
